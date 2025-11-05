@@ -10,4 +10,5 @@ dependencies = [
     "scipy>=1.13.1",
     "torch-hd>=5.8.4",
     "xarray>=2024.7.0",
+    "xrft>=1.0.1",
 ]
