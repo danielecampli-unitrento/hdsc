@@ -8,7 +8,10 @@ dependencies = [
     "matplotlib>=3.9.4",
     "pandas>=2.3.3",
     "scipy>=1.13.1",
+    "torch>=2.8.0",
     "torch-hd>=5.8.4",
+    "tqdm>=4.67.1",
+    "urllib3>=2.5.0",
     "xarray>=2024.7.0",
     "xrft>=1.0.1",
 ]
