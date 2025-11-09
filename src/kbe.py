@@ -4,6 +4,7 @@ import xarray as xr
 import warnings
 import torchhd
 import torch
+from tqdm import tqdm
 from urllib3.exceptions import NotOpenSSLWarning
 warnings.filterwarnings("ignore", category=NotOpenSSLWarning)
 
@@ -51,17 +52,34 @@ if __name__ == "__main__":
         vsa=vsa_encoding)
 
     tensor_dataset =  torch.tensor(dataset.values).permute(1, 0, 2)
-
     frequencies = tensor_dataset.shape[0]
     radii = tensor_dataset.shape[1]
-    signal_embeddings_by_radius = []
-    for frequency in np.arange(frequencies):
-        for radius in np.arange(radii):
-            signal = tensor_dataset[frequency, radius, :]
-            print(frequency, radius, signal)
-            signal_embedding = embed(signal, dataset.time.size, embedding_size, "density", vsa_encoding)
-            signal_embeddings_by_radius.append(signal_embedding)
-        kbe = torchhd.hash_table(radius_embeddings, signal_embeddings_by_radius)
-        print(f"Embedding frequency {frequency + 1} of {dataset.frequency.size}")
-    kbe = torchhd.hash_table(frequency_embeddings, signal_embeddings_by_radius)
-    print(kbe)
+    signal_embeddings = []
+
+    total_iterations = frequencies * radii
+
+    with tqdm(total=total_iterations, desc="Embedding signals", unit="pair") as pbar:
+        for frequency in range(frequencies):
+            signal_embeddings_by_radius = []
+            for radius in range(radii):
+                signal = tensor_dataset[frequency, radius, :]
+                signal_embedding = embed(signal, dataset.time.size, embedding_size, "density", vsa_encoding)
+                signal_embeddings_by_radius.append(signal_embedding)
+                
+                # Update progress
+                pbar.update(1)
+                # Optional: show which (freq, radius) pair is processing
+                pbar.set_postfix(freq=frequency+1, radius=radius*10+10)
+            
+            signal_embeddings.append(signal_embeddings_by_radius)
+
+    embeddings = xr.DataArray(
+        signal_embeddings,
+        dims=('frequency', 'radius', 'dimension'),
+        coords={
+            'frequency': np.arange(dataset.frequency.size) + 1,
+            'radius': np.arange(dataset.radius.size) * 10 + 10,
+            'dimension': np.arange(embedding_size) + 1
+        }
+    )
+    embeddings.to_netcdf(os.path.join(output_folder, "bsc.embeddings2.nc"))
