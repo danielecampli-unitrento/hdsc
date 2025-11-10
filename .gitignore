@@ -9,8 +9,10 @@ wheels/
 # Virtual environments
 .venv
 
-# Others
+# macOS-specific
 *.DS_Store
 .DS_Store
+
+# VSCode-specific
 *.code-workspace
 .vscode
