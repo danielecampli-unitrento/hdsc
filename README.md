@@ -1,4 +1,8 @@
-# HDSC: classifying pulmonary fibrosis extensions harnessing lung ultrasound spectroscopy and HDC/VSA comparative analysis
+<div align="center">
+
+# HDSC: classifying pulmonary fibrosis extensions harnessing lung ultrasound spectroscopy and hyperdimensional computing (HDC/VSA)
+
+</div>
 
 ![ultra_lab](assets/ultra-banner-hdsc.png)
 
