@@ -12,6 +12,22 @@ wheels/
 # macOS-specific
 *.DS_Store
 .DS_Store
+__MACOSX/
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+._*
 
 # VSCode-specific
 *.code-workspace
