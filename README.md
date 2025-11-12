@@ -4,7 +4,9 @@
 
 </div>
 
+
 ![ultra_lab](assets/ultra-banner-hdsc.png)
+
 
 <div align="justify">
 
@@ -12,6 +14,8 @@
 The following is a thesis project conducted within the research lines of the ULTRa laboratory at the University of Trento. Grounded in ultrasound-based settings, it has the aim to enable accurate classification of pulmonary fibrotic tissue size through the analysis of high-frequency probing signals subject to heavy scattering.
 
 </div>
+
+
 
 
 <div align="center">
@@ -34,12 +38,16 @@ The following is a thesis project conducted within the research lines of the ULT
 </div>
 
 
+
+
 <div align="justify">
 
 ## Project roots
 This project was born in the context of (quantitative) ultrasound lung spectroscopy applied to the diagnosis of pulmonary fibrosis. In order to detect and classify such fibrotic accumulations, lung ultrasound spectroscopy (LUS) is a cheap and accessible potential solution, especially when compared to techniques like high-resolution computed tomography (HRCT), which is particularly unsuitable for rapid preliminary examinations. Unfortunately, LUS adoption is not devoid of obstacles: for instance, when high-frequency probing signals are sent, fibrotic tissues act as acoustic traps, and the reflected signals are subject to heavy scattering. The direct consequence of this scattering effect is that classifying the fibrosis size directly using such collected signals suddenly becomes not straightforward at all, making LUS alone a less effective candidate to discover pathological situations.
 
 </div>
+
+
 
 
 <div align="justify">
@@ -50,14 +58,20 @@ The aim of this project is to complement LUS with modern data-driven computation
 </div>
 
 
+
+
 <div align="justify">
 
 ## Documentation
 The following is the list of macro-experiments, in the form of Jupyter notebooks, documenting the evolution of the project in its entirety.
-1. [ETL pipeline](./nbsrc/etl.ipynb): extract-transform-load procedures starting from Matlab simulation-based data
-2. [Knowledge bases embedding](./nbsrc/kbe.ipynb): construction of queryable knowledge base embeddings via HDC/VSA
+1. [[ETL] Extract-transform-load pipeline](./nbsrc/etl.ipynb): extract-transform-load procedures starting from Matlab simulation-based data
+2. [[EDA] Exploratory data analysis experiments](./nbsrc/eda.ipynb): exploratory data analysis conducted to gain initial insights on the problem settings and its peculiar datasets
+3. [[KBE] Knowledge base embedding experiments](./nbsrc/kbe.ipynb): construction of queryable knowledge bases via HDC/VSA embedding
+4. [[MPT] Model performance testing experiments](./nbsrc/mpt.ipynb): classification accuracy and generalization performance tests 
 
 </div>
+
+
 
 
 <div align="justify">
@@ -71,9 +85,22 @@ Below, the collection of simulation datasets, refined dataframes and HDC/VSA emb
 </div>
 
 
+
+
+<div align="justify">
+
+## Literature
+
+- [2020] F. Mento, G. Soldati, R. Prediletto, M. Demi and L. Demi, [Quantitative Lung Ultrasound Spectroscopy Applied to the Diagnosis of Pulmonary Fibrosis: The First Clinical Study](https://doi.org/10.1109/TUFFC.2020.3012289)
+
+</div>
+
+
+
+
 <div align="justify">
 
 ## License
-The project is under MIT license; see [here](./LICENSE).
+The project is released under MIT license; see [here](./LICENSE).
 
 </div>
