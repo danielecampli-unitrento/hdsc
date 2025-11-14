@@ -67,7 +67,7 @@ The following is the list of macro-experiments, in the form of Jupyter notebooks
 1. [[ETL] Extract-transform-load pipeline](./nbsrc/etl.ipynb): extract-transform-load procedures starting from Matlab simulation-based data
 2. [[EDA] Exploratory data analysis](./nbsrc/eda.ipynb): exploratory data analysis conducted to gain initial insights on the problem settings and its peculiar datasets
 3. [[EPM] Encoding & parameters modeling](./nbsrc/epm.ipynb): selection and shaping of parametric entities, with subsequent encoding experiments
-4. [[KBE] Knowledge base embedding](./nbsrc/kbe.ipynb): construction of queryable knowledge bases via HDC/VSA embedding
+4. [[KBE] Knowledge base embedding](./nbsrc/kbe.ipynb): construction of queryable knowledge bases via hyperdimensional computing techniques
 5. [[PTT] Performance testing & tuning](./nbsrc/ptt.ipynb): classification accuracy and generalization performance tests, with complementary tuning experiments
 
 </div>
