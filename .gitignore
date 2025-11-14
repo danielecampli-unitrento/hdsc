@@ -32,3 +32,6 @@ Temporary Items
 # VSCode-specific
 *.code-workspace
 .vscode
+
+# Workspace-specific
+docnotes*
