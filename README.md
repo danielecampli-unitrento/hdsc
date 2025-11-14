@@ -66,8 +66,9 @@ The aim of this project is to complement LUS with modern data-driven computation
 The following is the list of macro-experiments, in the form of Jupyter notebooks, documenting the evolution of the project in its entirety.
 1. [[ETL] Extract-transform-load pipeline](./nbsrc/etl.ipynb): extract-transform-load procedures starting from Matlab simulation-based data
 2. [[EDA] Exploratory data analysis experiments](./nbsrc/eda.ipynb): exploratory data analysis conducted to gain initial insights on the problem settings and its peculiar datasets
-3. [[KBE] Knowledge base embedding experiments](./nbsrc/kbe.ipynb): construction of queryable knowledge bases via HDC/VSA embedding
-4. [[MPT] Model performance testing experiments](./nbsrc/mpt.ipynb): classification accuracy and generalization performance tests 
+3. [[EPM] Encoding & parameters modeling experiments](./nbsrc/epm.ipynb): selection and shaping of parametric entities, with subsequent encoding experiments
+4. [[KBE] Knowledge base embedding experiments](./nbsrc/kbe.ipynb): construction of queryable knowledge bases via HDC/VSA embedding
+5. [[PTT] Performance testing & tuning experiments](./nbsrc/ptt.ipynb): classification accuracy and generalization performance tests, with complementary tuning experiments
 
 </div>
 
