@@ -1,7 +1,7 @@
 [project]
 name = "hdsc"
 version = "0.1.0"
-description = "HDSC: classifying pulmonary fibrosis extensions harnessing lung ultrasound spectroscopy and HDC/VSA analysis"
+description = "HDSC: classifying pulmonary fibrosis extensions harnessing lung ultrasound spectroscopy and hyperdimensional computing (HDC/VSA)"
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
